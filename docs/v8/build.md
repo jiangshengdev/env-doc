@@ -28,6 +28,7 @@ sidebar_position: 1
 
    ```shell
    cd ~/v8/v8
+   git checkout main
    ```
 
 2. 拉取最新更改并安装所有新的构建依赖项：
