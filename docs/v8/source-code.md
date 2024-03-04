@@ -1,8 +1,12 @@
+---
+sidebar_position: 2
+---
+
 # 获取 V8 源代码
 
 ## 说明
 
-1. 首先，在 macOS 上安装 Git 和 depot_tools。
+1. 首先，在 macOS 上安装 Git 和 [depot_tools](./get-depot-tools)。
 
 2. 通过执行以下命令在终端中更新 depot_tools。
 
