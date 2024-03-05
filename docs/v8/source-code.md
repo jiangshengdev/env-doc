@@ -6,9 +6,9 @@ sidebar_position: 2
 
 ## 说明
 
-1. 首先，在 macOS 上安装 Git 和 [depot_tools](./get-depot-tools)。
+1. 在 macOS 上，首先安装 Git，然后安装 [`depot_tools`](./get-depot-tools)。
 
-2. 通过执行以下命令在终端中更新 depot_tools。
+2. 通过在你的终端中执行以下命令来更新 `depot_tools`。
 
    ```shell
    gclient
@@ -25,7 +25,7 @@ sidebar_position: 2
    cd v8
    ```
 
-在那之后，这将导致你处于一个分离的 HEAD 状态。
+在那之后，你会故意处于一个分离头状态。
 
 你可以选择性地指定新分支应如何被跟踪：
 
@@ -34,7 +34,7 @@ git config branch.autosetupmerge always
 git config branch.autosetuprebase always
 ```
 
-或者，你也可以通过如下命令创建一个新的本地分支（推荐做法）：
+或者，你可以像这样创建新的本地分支（推荐）：
 
 ```shell
 git new-branch fix-bug-1234
@@ -42,7 +42,7 @@ git new-branch fix-bug-1234
 
 ## 保持最新状态
 
-使用 `git pull` 更新你当前的分支。请注意，如果你当前不在任何分支上，应使用 `git fetch` 而不是 `git pull` 来更新。
+使用 `git pull` 更新你当前的分支。请注意，如果你不在一个分支上，`git pull` 将无法工作，你需要改用 `git fetch`。
 
 ```shell
 git pull
