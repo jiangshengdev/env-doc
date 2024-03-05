@@ -14,9 +14,9 @@ cd ~/chromium/tools
 git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
 ```
 
-## 自动配置环境变量
+## 配置环境变量
 
-然后，使用以下命令自动将 `depot_tools` 路径添加到你的 `~/.zshrc` 文件中，确保你可以在任何位置使用它的工具：
+然后，使用以下命令将 `depot_tools` 路径添加到你的 `~/.zshrc` 文件中，确保你可以在任何位置使用这些工具：
 
 ```shell
 echo 'export PATH=~/chromium/tools/depot_tools:$PATH' >> ~/.zshrc
