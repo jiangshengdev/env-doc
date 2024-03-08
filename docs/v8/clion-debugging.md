@@ -45,7 +45,7 @@ target_link_libraries(v8 CoreLib)
 
 为了在 CLion 中调试 V8 引擎执行的 JavaScript 代码，需要创建一个 JavaScript 文件作为调试入口。
 
-创建一个名为 `debug.js` 的 JavaScript 文件，并将其放置在 `out/arm64.debug` 目
+创建一个名为 `debug.js` 的 JavaScript 文件，并将其放置在 `out/arm64.debug` 目录。
 
 执行以下命令以创建文件并用 CLion 打开它：
 
@@ -82,6 +82,8 @@ console.log(a + b + c);
    - Build: `<None>`
    - Clean: `<None>`
 
+   ![custom-build-targets.png](img/custom-build-targets.png)
+
 5. 完成配置后，点击 `OK` 或 `Apply` 保存更改。
 
 ### 运行/调试配置
@@ -91,13 +93,16 @@ console.log(a + b + c);
 2. 点击左上角的加号，选择 `Native Application`。
 
 3. 配置详情：
+
    - Name: `Debug`
    - Target: `None`
    - Executable: `$PROJECT_DIR$/out/arm64.debug/d8`
-   - Program params: `debug.js`
+   - Program arguments: `debug.js`
    - 其它设置保持默认。
 
-保存配置至 `.run/Debug.run.xml` 文件。其内容如下：
+   ![run-debug-configurations.png](img/run-debug-configurations.png)
+
+选中 `Store as Project file` 后将自动保存配置至 `.run/Debug.run.xml` 文件。其内容如下：
 
 ```xml
 <component name="ProjectRunConfigurationManager">
@@ -114,7 +119,7 @@ console.log(a + b + c);
 
 ## 设置断点
 
-1. 打开 `d8.cc` 文件
+1. 打开 `d8.cc` 文件：
 
    ```shell
    clion src/d8/d8.cc
@@ -122,8 +127,16 @@ console.log(a + b + c);
 
 2. 在文件末尾的 `main` 函数处设置断点，并右键选择 `Use file name only`。
 
+   ![breakpoints.png](img/breakpoints.png)
+
 ## 开始调试
 
 点击右上角的甲虫图标启动调试。
 
-程序将在 `main` 函数处暂停，至此可以愉快的进行调试了。
+程序将在 `main` 函数处暂停。
+
+![main.png](img/main.png)
+
+至此，可以愉快的进行调试了，比如 `Step Into` 一个函数。
+
+![shell-main.png](img/shell-main.png)
