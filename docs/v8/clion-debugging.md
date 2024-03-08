@@ -8,7 +8,7 @@ sidebar_position: 4
 
 ## 项目初始化
 
-首先，参考前文将 V8 代码仓库克隆到本地，并使用 CLion 打开项目：
+首先，参考 [前文](./build) 将 V8 代码仓库克隆到本地并构建，然后使用 CLion 打开项目：
 
 ```shell
 cd ~/v8/v8
@@ -17,7 +17,7 @@ clion .
 
 ## 优化调试体验（可选）
 
-为了在 CLion 中获取更佳的调试体验，尽管 V8 不是一个基于 CMake 的项目，也可以通过创建一个简单的 `CMakeLists.txt` 文件来「欺骗」CLion，从而激活代码导航等功能。这一步骤不涉及实际的构建过程。
+为了在 CLion 中获得更佳的调试体验，尽管 V8 不是一个基于 CMake 的项目，也可以通过创建一个简单的 `CMakeLists.txt` 文件来「欺骗」CLion，从而激活代码导航等功能。这一步骤不涉及实际的构建过程。
 
 在项目根目录下执行以下命令创建 `CMakeLists.txt` 文件：
 
@@ -27,7 +27,7 @@ touch CMakeLists.txt
 
 然后，向 `CMakeLists.txt` 文件中添加以下内容：
 
-```txt
+```cmake
 cmake_minimum_required(VERSION 3.28)
 project(v8)
 include_directories(./)
@@ -41,13 +41,11 @@ add_library(CoreLib STATIC ${ALL_SOURCES})
 target_link_libraries(v8 CoreLib)
 ```
 
-## 添加调试目标
+## 添加执行目标
 
-为了在 CLion 中调试 V8 引擎执行的 JavaScript 代码，需要创建一个 JavaScript 文件作为调试入口。
+为了在 CLion 中调试 V8 引擎执行 JavaScript 代码，需要一个 JavaScript 文件作为执行目标。创建一个名为 `debug.js` 的 JavaScript 文件，并将其放置在 `out/arm64.debug` 目录。
 
-创建一个名为 `debug.js` 的 JavaScript 文件，并将其放置在 `out/arm64.debug` 目录。
-
-执行以下命令以创建文件并用 CLion 打开它：
+执行以下命令创建文件并用 CLion 打开它：
 
 ```shell
 touch out/arm64.debug/debug.js
@@ -65,13 +63,13 @@ console.log(a + b + c);
 
 ## 新增配置
 
-为了调试而无需进行实际的构建过程，通过添加自定义构建目标来实现。
+由于前文已经使用 GN 进行构建，需要跳过 CLion 的 CMake 构建（目前的简单 `CMakeLists.txt` 配置也不足以构建），这可以通过添加自定义构建目标来实现。
 
 ### 自定义构建目标
 
 1. 打开 CLion 的偏好设置：选择菜单中的 `CLion` -> `Settings...`。
 
-2. 在偏好设置对话框中，导航到 `Settings` | `Build, Execution, Deployment` | `Custom Build Targets` 。
+2. 在偏好设置对话框中，导航到 `Settings` | `Build, Execution, Deployment` | `Custom Build Targets`。
 
 3. 点击左上角的加号来添加一个新的自定义构建目标。
 
@@ -84,11 +82,11 @@ console.log(a + b + c);
 
    ![custom-build-targets.png](img/custom-build-targets.png)
 
-5. 完成配置后，点击 `OK` 或 `Apply` 保存更改。
+5. 完成配置后，点击 `OK` 或 `Apply` 来保存更改。
 
 ### 运行/调试配置
 
-1. 打开 `Run` -> `Edit Configurations...`
+1. 选择菜单中的 `Run` -> `Edit Configurations...`。
 
 2. 点击左上角的加号，选择 `Native Application`。
 
@@ -98,11 +96,11 @@ console.log(a + b + c);
    - Target: `None`
    - Executable: `$PROJECT_DIR$/out/arm64.debug/d8`
    - Program arguments: `debug.js`
-   - 其它设置保持默认。
+   - 其它设置保持默认
 
    ![run-debug-configurations.png](img/run-debug-configurations.png)
 
-选中 `Store as Project file` 后将自动保存配置至 `.run/Debug.run.xml` 文件。其内容如下：
+选中 `Store as project file` 后将自动保存配置至 `.run/Debug.run.xml` 文件。其内容如下：
 
 ```xml
 <component name="ProjectRunConfigurationManager">
@@ -125,7 +123,7 @@ console.log(a + b + c);
    clion src/d8/d8.cc
    ```
 
-2. 在文件末尾的 `main` 函数处设置断点，并右键选择 `Use file name only`。
+2. 在文件末尾的 `main` 函数处设置断点，并右键断点图标选择 `Use file name only`。
 
    ![breakpoints.png](img/breakpoints.png)
 
@@ -137,6 +135,6 @@ console.log(a + b + c);
 
 ![main.png](img/main.png)
 
-至此，可以愉快的进行调试了，比如 `Step Into` 一个函数。
+至此，可以愉快地进行调试了，比如 `Step Into` 一个函数。
 
 ![shell-main.png](img/shell-main.png)
