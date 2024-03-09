@@ -53,3 +53,13 @@ git pull
 ```shell
 gclient sync
 ```
+
+## 设置聚焦隐私（可选）
+
+从「聚焦」搜索中排除源代码文件夹。
+
+![siri-and-spotlight.png](source-code/img/siri-and-spotlight.png)
+
+![privacy.png](source-code/img/privacy.png)
+
+从「聚焦」搜索中排除特定文件和文件夹。请参阅 [防止「聚焦」在文件中搜索](https://support.apple.com/zh-cn/guide/mac-help/mchl1bb43b84/14.0/mac/14.0)。

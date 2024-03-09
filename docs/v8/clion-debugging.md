@@ -80,7 +80,7 @@ console.log(a + b + c);
    - Build: `<None>`
    - Clean: `<None>`
 
-   ![custom-build-targets.png](img/custom-build-targets.png)
+   ![custom-build-targets.png](clion-debugging/img/custom-build-targets.png)
 
 5. 完成配置后，点击 `OK` 或 `Apply` 来保存更改。
 
@@ -98,7 +98,7 @@ console.log(a + b + c);
    - Program arguments: `debug.js`
    - 其它设置保持默认
 
-   ![run-debug-configurations.png](img/run-debug-configurations.png)
+   ![run-debug-configurations.png](clion-debugging/img/run-debug-configurations.png)
 
 选中 `Store as project file` 后将自动保存配置至 `.run/Debug.run.xml` 文件。其内容如下：
 
@@ -125,7 +125,7 @@ console.log(a + b + c);
 
 2. 在文件末尾的 `main` 函数处设置断点，并右键断点图标选择 `Use file name only`。
 
-   ![breakpoints.png](img/breakpoints.png)
+   ![breakpoints.png](clion-debugging/img/breakpoints.png)
 
 ## 开始调试
 
@@ -133,8 +133,8 @@ console.log(a + b + c);
 
 程序将在 `main` 函数处暂停。
 
-![main.png](img/main.png)
+![main.png](clion-debugging/img/main.png)
 
 至此，可以愉快地进行调试了，比如 `Step Into` 一个函数。
 
-![shell-main.png](img/shell-main.png)
+![shell-main.png](clion-debugging/img/shell-main.png)

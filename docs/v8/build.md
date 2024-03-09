@@ -40,11 +40,11 @@ sidebar_position: 3
 3. 编译源代码：
 
    ```shell
-   tools/dev/gm.py arm64.release
+   tools/dev/gm.py arm64.debug
    ```
 
    或者，编译源代码并立即运行测试：
 
    ```shell
-   tools/dev/gm.py arm64.release.check
+   tools/dev/gm.py arm64.debug.check
    ```
