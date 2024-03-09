@@ -37,14 +37,26 @@ sidebar_position: 3
    git pull && gclient sync
    ```
 
-3. 编译源代码：
+3. 编译源代码（可选）：
 
    ```shell
-   tools/dev/gm.py arm64.debug
+   tools/dev/gm.py arm64.release
    ```
 
    或者，编译源代码并立即运行测试：
 
    ```shell
-   tools/dev/gm.py arm64.debug.check
+   tools/dev/gm.py arm64.release.check
    ```
+
+4. 为调试编译源代码：
+
+   ```shell
+   tools/dev/gm.py arm64.debug
+   ```
+
+   :::warning
+
+   不建议为调试编译运行测试，`arm64.debug.check` 速度极慢。
+
+   :::
