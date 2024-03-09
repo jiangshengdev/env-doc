@@ -11,7 +11,7 @@ const configuration = {
   path: 'img/icons',
   appName: 'Environment Document',
   appShortName: 'Env Doc',
-  appDescription: "会配环境，不求甚解",
+  appDescription: '会配环境，不求甚解',
   theme_color: '#25C2A0',
   background: '#FFFFFF',
   lang: 'zh-Hans',
