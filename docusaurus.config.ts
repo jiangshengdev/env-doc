@@ -2,6 +2,11 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+const isDev = process.env.NODE_ENV === 'development';
+
+const isDeployPreview =
+  !!process.env.NETLIFY && process.env.CONTEXT === 'deploy-preview';
+
 const config: Config = {
   title: 'Env Doc',
   tagline: 'Environment Document',
@@ -83,6 +88,18 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
       additionalLanguages: ['bash', 'cmake'],
+    },
+    algolia: {
+      appId: 'MAN8B4GHZ1',
+      apiKey: 'f33a653ae08eb4a82c1983c8ff33e8f8',
+      indexName: 'envcom',
+      replaceSearchResultPathname:
+        isDev || isDeployPreview
+          ? {
+              from: /^\/docs\/next/g.source,
+              to: '/docs',
+            }
+          : undefined,
     },
   } satisfies Preset.ThemeConfig,
 
