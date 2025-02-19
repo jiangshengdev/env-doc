@@ -98,7 +98,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
-      additionalLanguages: ['bash', 'cmake'],
+      additionalLanguages: ['bash', 'cmake', 'powershell'],
     },
     algolia: {
       appId: 'MAN8B4GHZ1',

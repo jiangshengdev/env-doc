@@ -17,7 +17,8 @@ clion .
 
 ## 优化调试体验（可选）
 
-为了在 CLion 中获得更佳的调试体验，尽管 V8 不是一个基于 CMake 的项目，也可以通过创建一个简单的 `CMakeLists.txt` 文件来「欺骗」CLion，从而激活代码导航等功能。这一步骤不涉及实际的构建过程。
+为了在 CLion 中获得更佳的调试体验，尽管 V8 不是一个基于 CMake 的项目，也可以通过创建一个简单的 `CMakeLists.txt`
+文件来「欺骗」CLion，从而激活代码导航等功能。这一步骤不涉及实际的构建过程。
 
 在项目根目录下执行以下命令创建 `CMakeLists.txt` 文件：
 
@@ -43,7 +44,8 @@ target_link_libraries(v8 CoreLib)
 
 ## 添加执行目标
 
-为了在 CLion 中调试 V8 引擎执行 JavaScript 代码，需要一个 JavaScript 文件作为执行目标。创建一个名为 `debug.js` 的 JavaScript 文件，并将其放置在 `out/arm64.debug` 目录。
+为了在 CLion 中调试 V8 引擎执行 JavaScript 代码，需要一个 JavaScript 文件作为执行目标。创建一个名为 `debug.js` 的
+JavaScript 文件，并将其放置在 `out/arm64.debug` 目录。
 
 执行以下命令创建文件并用 CLion 打开它：
 

@@ -24,12 +24,13 @@ sidebar_position: 2
 
 一般会显示 `Windows 防火墙` 的 `警告` 信息
 
-> “Windows 防火墙”规则生成了警告。
+:::warning[“Windows 防火墙”规则生成了警告。]
 
-> Windows
->
-> 防火墙已启用。请确保相应端口已打开，以启用远程访问。若要了解为每项功能打开的端口，请参阅 https://go.microsoft.com/fwlink/?linkid=2094702
-> 中的规则文档。
+Windows
+防火墙已启用。请确保相应端口已打开，以启用远程访问。若要了解为每项功能打开的端口，请参阅 https://go.microsoft.com/fwlink/?linkid=2094702
+中的规则文档。
+
+:::
 
 点击 `下一步` 继续
 
@@ -57,7 +58,7 @@ sidebar_position: 2
 
 ### SQLServer default instance
 
-```pwsh
+```powershell
 New-NetFirewallRule -DisplayName "SQLServer default instance" -Direction Inbound -LocalPort 1433 -Protocol TCP -Action Allow
 ```
 
@@ -67,7 +68,7 @@ New-NetFirewallRule -DisplayName "SQLServer default instance" -Direction Inbound
 
 ### SQLServer Browser service
 
-```pwsh
+```powershell
 New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound -LocalPort 1434 -Protocol UDP -Action Allow
 ```
 
@@ -107,7 +108,11 @@ New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound 
 
 在 `功能选择` 步骤，先全选，然后取消 `机器学习服务和语言扩展` 和 `机器学习服务器(独立)` 2 个选项
 
-> 注意必须取消这 2 个选项，否则会导致安装失败
+:::info[注意]
+
+必须取消这 2 个机器学习选项，否则会导致安装失败
+
+:::
 
 然后点击 `下一步` 继续
 
@@ -141,9 +146,17 @@ New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound 
 
 在 `数据库引擎配置` 步骤，选择 `混合模式`，然后设置 `系统管理员` 的密码并点击 `添加当前用户`
 
-> 请记住这个密码
->
-> 请勿使用类似 `123456` 这样的简单密码
+:::note
+
+请记住这个密码
+
+:::
+
+:::danger
+
+请勿使用类似 `123456` 这样的简单密码
+
+:::
 
 然后点击 `下一步` 继续
 
@@ -181,7 +194,11 @@ New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound 
 
 在 `Distributed Replay 客户端` 步骤，输入控制器名称，比如（JOYUAI）
 
-> 请记住这个名称
+:::tip
+
+请记住这个名称
+
+:::
 
 然后点击 `下一步` 继续
 
