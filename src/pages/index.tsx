@@ -22,6 +22,12 @@ function HomepageHeader() {
           >
             V8
           </Link>
+          <Link
+            className="button button--secondary button--lg"
+            to="docs/category/sql-server-2019"
+          >
+            SQL Server 2019
+          </Link>
         </div>
       </div>
     </header>
