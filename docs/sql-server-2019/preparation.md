@@ -14,7 +14,7 @@ sidebar_position: 1
 
 ---
 
-## 下载
+## 下载安装器
 
 下载地址：
 
@@ -32,6 +32,8 @@ sidebar_position: 1
 
 ---
 
+## 下载介质
+
 等待安装程序加载完成后，选择安装类型为：`下载介质`
 
 ![download-media.png](preparation/img/download-media.png)
@@ -46,6 +48,8 @@ sidebar_position: 1
 
 ---
 
+## 装载光盘镜像
+
 下载完成介质后，装载光盘镜像文件：
 
 `SQLServer2019-x64-CHS-Dev.iso`
@@ -53,6 +57,8 @@ sidebar_position: 1
 ![loading-iso.png](preparation/img/loading-iso.png)
 
 ---
+
+## 启动安装器
 
 在装载后的驱动器中，以管理员身份运行：`setup.exe`
 
@@ -65,6 +71,8 @@ sidebar_position: 1
 ![uac-dvd.png](preparation/img/uac-dvd.png)
 
 ---
+
+## 安装中心界面
 
 你将看到如下的安装程序界面：
 
