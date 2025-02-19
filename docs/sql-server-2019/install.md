@@ -4,11 +4,11 @@ sidebar_position: 2
 
 # 开始安装
 
+## 安装中心
+
 切换左侧为 `安装` 选项卡，然后点击 `全新 SQL Server 独立安装或向现有安装添加功能` 开始安装 SQL Server 2019。
 
 ![install-center.png](install/img/install-center.png)
-
----
 
 ## 产品更新
 
@@ -17,8 +17,6 @@ sidebar_position: 2
 点击 `下一步` 继续
 
 ![product-update.png](install/img/product-update.png)
-
----
 
 ## 安装规则
 
@@ -36,8 +34,6 @@ sidebar_position: 2
 点击 `下一步` 继续
 
 ![installation-rules.png](install/img/installation-rules.png)
-
----
 
 ## 配置防火墙
 
@@ -69,8 +65,6 @@ New-NetFirewallRule -DisplayName "SQLServer default instance" -Direction Inbound
 
 ![tcp.png](install/img/tcp.png)
 
----
-
 ### SQLServer Browser service
 
 ```pwsh
@@ -81,11 +75,11 @@ New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound 
 
 ![udp.png](install/img/udp.png)
 
+---
+
 在开始菜单中搜索 `高级安全 Windows Defender 防火墙`，并点击 `打开`
 
 ![safe.png](install/img/safe.png)
-
----
 
 ## 检查入站规则
 
@@ -95,15 +89,11 @@ New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound 
 
 至此，`Windows 防火墙` 配置完成
 
----
-
 ## 产品密钥
 
 在`产品密钥`步骤，选择指定可用版本为 `Developer`，然后点击 `下一步` 继续
 
 ![develop.png](install/img/develop.png)
-
----
 
 ## 许可条款
 
@@ -123,23 +113,17 @@ New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound 
 
 ![function-selection.png](install/img/function-selection.png)
 
----
-
 ## 实例配置
 
 在 `实例配置` 步骤，选择 `默认实例`，然后点击 `下一步` 继续
 
 ![instance-configuration.png](install/img/instance-configuration.png)
 
----
-
 ## PolyBase 配置
 
 在 `PolyBase 配置`步骤，直接点击 `下一步` 继续
 
 ![poly-base.png](install/img/poly-base.png)
-
----
 
 ## Java 安装位置
 
@@ -153,8 +137,6 @@ New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound 
 
 ![server-config.png](install/img/server-config.png)
 
----
-
 ## 数据库引擎配置
 
 在 `数据库引擎配置` 步骤，选择 `混合模式`，然后设置 `系统管理员` 的密码并点击 `添加当前用户`
@@ -167,8 +149,6 @@ New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound 
 
 ![database-engine-configuration.png](install/img/database-engine-configuration.png)
 
----
-
 ## Analysis Service 配置
 
 在 `Analysis Service 配置` 步骤，点击 `添加当前用户`
@@ -177,23 +157,17 @@ New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound 
 
 ![analysis-service.png](install/img/analysis-service.png)
 
----
-
 ## Integration Service Scale Out 配置 - 主节点
 
 在 `Integration Service Scale Out 配置 - 主节点` 步骤，直接点击 `下一步` 继续
 
 ![integration-service.png](install/img/integration-service.png)
 
----
-
 ## Integration Service Scale Out 配置 - 辅助角色节点
 
 在 `Integration Service Scale Out 配置 - 辅助角色节点` 步骤，直接点击 `下一步` 继续
 
 ![integration-service-role.png](install/img/integration-service-role.png)
-
----
 
 ## Distributed Replay 控制器
 
@@ -202,8 +176,6 @@ New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound 
 然后点击 `下一步` 继续
 
 ![distributed-replay.png](install/img/distributed-replay.png)
-
----
 
 ## Distributed Replay 客户端
 
@@ -215,15 +187,11 @@ New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound 
 
 ![distributed-replay-client.png](install/img/distributed-replay-client.png)
 
----
-
 ## 准备安装
 
 在 `准备安装` 步骤，点击 `安装` 开始安装
 
 ![install.png](install/img/install.png)
-
----
 
 ## 安装完成
 

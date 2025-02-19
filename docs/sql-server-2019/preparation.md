@@ -12,8 +12,6 @@ sidebar_position: 1
 
 ![system-about.png](preparation/img/system-about.png)
 
----
-
 ## 下载安装器
 
 下载地址：
@@ -30,8 +28,6 @@ sidebar_position: 1
 
 ![user-account-control.png](preparation/img/user-account-control.png)
 
----
-
 ## 下载介质
 
 等待安装程序加载完成后，选择安装类型为：`下载介质`
@@ -46,8 +42,6 @@ sidebar_position: 1
 
 ![start-download.png](preparation/img/start-download.png)
 
----
-
 ## 装载光盘镜像
 
 下载完成介质后，装载光盘镜像文件：
@@ -55,8 +49,6 @@ sidebar_position: 1
 `SQLServer2019-x64-CHS-Dev.iso`
 
 ![loading-iso.png](preparation/img/loading-iso.png)
-
----
 
 ## 启动安装器
 
@@ -69,8 +61,6 @@ sidebar_position: 1
 在可能出现的 `用户账户控制` 弹窗中点击 `是` 继续
 
 ![uac-dvd.png](preparation/img/uac-dvd.png)
-
----
 
 ## 安装中心界面
 
