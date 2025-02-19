@@ -2,7 +2,20 @@
 sidebar_position: 2
 ---
 
+import TOCInline from '@theme/TOCInline';
+
 # 开始安装
+
+## 安装步骤概览
+
+:::note[在开始安装前，请先了解整个安装流程的主要步骤]
+
+<TOCInline
+  toc={toc.filter((node) => {
+    return node.level === 2 && node.id !== '安装步骤概览';
+  })}
+/>
+:::
 
 ## 安装中心
 
@@ -44,7 +57,7 @@ Windows
 
 ---
 
-在可能出现的 `用户账户控制` 弹窗中点击 `是` 继续
+由于需要以管理员权限运行 `PowerShell` 来配置防火墙，系统会弹出 `用户账户控制` 弹窗以确认操作权限。请点击 `是` 继续
 
 ![power-shell-uac.png](install/img/power-shell-uac.png)
 
@@ -54,9 +67,21 @@ Windows
 
 ![power-shell-start.png](install/img/power-shell-start.png)
 
+:::warning[风险提示]
+在 PowerShell 中执行命令时，请确保准确复制粘贴命令，误输入可能导致防火墙配置紊乱或其他系统问题，如有疑问请在专业人士指导下操作。
+:::
+
 请参阅下面的示例，打开 SQL Server 默认实例和 SQL Server Browser 服务的 TCP 端口 1433 和 UDP 端口 1434：
 
 ### SQLServer default instance
+
+:::info[说明]
+
+下面的命令会在防火墙中打开 TCP 端口 1433
+
+**打开 TCP 端口 1433 用于 SQL Server 默认实例的远程访问。**
+
+:::
 
 ```powershell
 New-NetFirewallRule -DisplayName "SQLServer default instance" -Direction Inbound -LocalPort 1433 -Protocol TCP -Action Allow
@@ -67,6 +92,14 @@ New-NetFirewallRule -DisplayName "SQLServer default instance" -Direction Inbound
 ![tcp.png](install/img/tcp.png)
 
 ### SQLServer Browser service
+
+:::info[说明]
+
+下面的命令会在防火墙中打开 UDP 端口 1434。
+
+**UDP 端口 1434 用于 SQL Server Browser 服务，它可以帮助客户端定位不同实例的 SQL Server。**
+
+:::
 
 ```powershell
 New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound -LocalPort 1434 -Protocol UDP -Action Allow
@@ -112,6 +145,8 @@ New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound 
 
 必须取消这 2 个机器学习选项，否则会导致安装失败
 
+**如果选择了机器学习选项，会出现安装程序无法与下载服务器联系的问题。**
+
 :::
 
 然后点击 `下一步` 继续
@@ -153,9 +188,14 @@ New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound 
 :::
 
 :::danger
+请勿使用类似 `123456` 这样的简单密码。建议密码至少为 8 位，并包含以下字符中的至少三种：
 
-请勿使用类似 `123456` 这样的简单密码
+- 大写字母
+- 小写字母
+- 数字
+- 特殊字符
 
+请确保密码复杂且符合安全要求。
 :::
 
 然后点击 `下一步` 继续
@@ -192,11 +232,13 @@ New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound 
 
 ## Distributed Replay 客户端
 
-在 `Distributed Replay 客户端` 步骤，输入控制器名称，比如（JOYUAI）
+在 `Distributed Replay 客户端` 步骤，输入控制器名称，比如 `JOYUAI`
 
 :::tip
 
 请记住这个名称
+
+**输入的控制器名称应遵循由字母组成的规则，建议不要使用过于复杂或包含特殊符号的名称，以便于后续管理和识别。**
 
 :::
 
