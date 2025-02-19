@@ -225,4 +225,10 @@ New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound 
 
 ---
 
-待安装完成后，重启计算机，至此，安装完成
+## 安装完成
+
+待安装完成后，点击 `关闭` 按钮以关闭安装程序，然后重启计算机
+
+![finish.png](install/img/finish.png)
+
+至此，`SQL Server 2019` 安装完成
