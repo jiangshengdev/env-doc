@@ -63,6 +63,12 @@ sidebar_position: 1
 - 包类型为：`ISO`
 - 选择合适的下载位置后，点击 `下载`
 
+:::info[下载位置]
+
+请记住你选择的**下载位置**，以便后续装载光盘镜像文件。
+
+:::
+
 ![start-download.png](preparation/img/start-download.png)
 
 :::warning[下载错误处理]
@@ -73,18 +79,22 @@ sidebar_position: 1
 3. 若问题持续存在，请联系系统管理员或查阅相关支持文档。
    :::
 
-## 装载光盘镜像
+## 下载完成
 
-下载完成介质后，装载光盘镜像文件：
+下载成功后，你将看到如下提示：
+
+![download-finish.png](preparation/img/download-finish.png)
+
+点击 `打开文件夹`，并找到下载的镜像文件：
 
 `SQLServer2019-x64-CHS-Dev.iso`
 
-**操作步骤：**
+---
 
-1. 打开 `文件资源管理器` 或 `此电脑`。
-2. 定位到 ISO 文件所在位置。
-3. 右键点击 `SQLServer2019-x64-CHS-Dev.iso` 文件，并选择 `装载`；系统将自动将该镜像作为虚拟光驱挂载。
-4. 若需卸载虚拟光驱，可右键点击对应的光驱并选择“弹出”。
+## 装载光盘镜像
+
+1. 右键点击 `SQLServer2019-x64-CHS-Dev.iso` 文件，并选择 `装载`；系统将自动将该镜像作为虚拟光驱挂载。
+2. 若需卸载虚拟光驱，可右键点击对应的光驱并选择 `弹出`。
 
 ![loading-iso.png](preparation/img/loading-iso.png)
 
