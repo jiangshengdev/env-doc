@@ -101,9 +101,9 @@ const config: Config = {
       additionalLanguages: ['bash', 'cmake', 'powershell'],
     },
     algolia: {
-      appId: 'MAN8B4GHZ1',
-      apiKey: 'f33a653ae08eb4a82c1983c8ff33e8f8',
-      indexName: 'envcom',
+      appId: 'JHXEP3C1OA',
+      apiKey: 'e820bde5184163f15babd12d5e281529',
+      indexName: 'env',
       replaceSearchResultPathname:
         isDev || isDeployPreview
           ? {
