@@ -17,9 +17,9 @@
     "format": "prettier --write docs src scripts"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.6.0",
-    "@docusaurus/plugin-pwa": "^3.6.0",
-    "@docusaurus/preset-classic": "^3.6.0",
+    "@docusaurus/core": "^3.7.0",
+    "@docusaurus/plugin-pwa": "^3.7.0",
+    "@docusaurus/preset-classic": "^3.7.0",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
     "favicons": "^7.1.5",
