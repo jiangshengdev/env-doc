@@ -76,7 +76,6 @@ console.log(a + b + c);
 3. 点击左上角的加号来添加一个新的自定义构建目标。
 
 4. 在新的自定义构建目标设置框中，进行以下配置：
-
    - Name: `None`
    - Toolchain: `Use Default`
    - Build: `<None>`
@@ -93,7 +92,6 @@ console.log(a + b + c);
 2. 点击左上角的加号，选择 `Native Application`。
 
 3. 配置详情：
-
    - Name: `Debug`
    - Target: `None`
    - Executable: `$PROJECT_DIR$/out/arm64.debug/d8`
