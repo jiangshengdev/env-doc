@@ -1,0 +1,10 @@
+// TypeScript 7 removed baseUrl; null clears the inherited Docusaurus value.
+{
+  "extends": "@docusaurus/tsconfig",
+  "compilerOptions": {
+    "baseUrl": null,
+    "paths": {"@site/*": ["./*"]},
+    "strict": true
+  },
+  "exclude": [".docusaurus", "build"]
+}
