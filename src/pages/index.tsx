@@ -19,13 +19,13 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="docs/category/v8"
+            to="/docs/category/v8"
           >
             V8
           </Link>
           <Link
             className="button button--secondary button--lg"
-            to="docs/category/sql-server-2019"
+            to="/docs/category/sql-server-2019"
           >
             SQL Server 2019
           </Link>
@@ -39,8 +39,8 @@ export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      title={siteConfig.title}
+      description="V8 与 SQL Server 2019 环境搭建、配置和调试文档。"
     >
       <HomepageHeader />
     </Layout>
